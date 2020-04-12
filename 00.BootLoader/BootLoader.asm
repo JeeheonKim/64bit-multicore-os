@@ -15,7 +15,7 @@ START:
 
 .SCREENCLEARLOOP:           ; clears the screen
     mov byte [ es:si ], 0  ; copy 0 to where 'vid mom text' is located (deletes text)
-    mov byte [ es:si+1 ], 0x0A  ; copy 0x0A(bright green) to where 'vid mem prop' is located
+    mov byte [ es:si+1 ], 0x06  ; copy 0x06(yellow) 0x0A(bright green) to where 'vid mem prop' is located
 
     add si, 2                   ; we are done setting text and props, move on
 
@@ -43,7 +43,7 @@ START:
 
     jmp $   ;infinite loop
 
-MESSAGE1:   db 'Jeeheon MINT64 OS Boot Loader Start :)', 0; define a string to print
+MESSAGE1:   db 'Jeeheon MINT64 OS Boot Loader Starts...', 0; define a string to print
             ; we define the last char as 0 so that .MESSAGELOOP knows that the string ended
 
 times 510 - ( $ - $$ )  db  0x00    ; $: 현재 라인의 어드레스
