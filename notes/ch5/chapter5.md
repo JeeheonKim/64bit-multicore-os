@@ -15,7 +15,7 @@ BIOS 서비스는 SWI를 통해 호출할 수 있지만 BIOS도 만능은 아니
 How? 레지스터!!
 
 섹터크기의 이미지를 메모리로 복사하는 소스코드(c언어)
-```$xslt
+```c
 int main(int arc, char* argv[]) {
     int iTotalSectorCount = 1024;
     int iSectorNumber = 2;
